@@ -101,3 +101,15 @@ print(pos)
 ```
         for v. while 
 ~~근데 내가 할때는 왜 멈춘거지~~ << index도 알아보자.
+
+```python 
+numbers = [1, 2, 3, 0]
+pos = 0
+while True:
+    n = numbers[pos]
+    if n == 0:
+        print(n)
+    pos = pos + 1
+    #list index out of range 오류 나옴.
+    #while이 폭주합니다!
+```
