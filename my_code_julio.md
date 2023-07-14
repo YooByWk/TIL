@@ -116,7 +116,7 @@ while True:
 ---
 ### 2023.07.14
 ```python
-import random
+import random  #모듈 활용?
 i = list(range(1, 20))
 print(i)
 cnt = 0
@@ -133,3 +133,32 @@ while True:
         [1, 2, 3, 4, 5, 6]
         33942
 로또 반도 안되는 숫자인데 음 . . .
+
+> #### 오후
+
+```python
+numbers = [1, 2, 4, 0, 5, 6, 3, 1, 4, 2]
+l = len(numbers)
+pos = 0
+# cnt = 0
+# for n in numbers:
+#     cnt += 1
+# l = cnt 
+# pos = 0   // 여기까지가 len이 하는 일
+while pos <l :
+    n = numbers[pos]
+    if n == 0:
+        break
+    pos = pos + 1
+if pos< l:
+    print(f'numbers의 {[pos]}에 0이 있음')
+else:
+    print('no hay 0')
+
+
+numbers = [3, 4, 2, 8, 10, 2]
+print(max(numbers), max(2,3, 4, 1))
+newn = sorted(numbers)
+print(newn)
+```
+간단(어려웠던) 실습. 함수의 소중함을 느끼게 만들지도 몰라요
