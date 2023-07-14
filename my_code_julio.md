@@ -196,3 +196,46 @@ for test_case in range(1,t+1):
 ```
 실패 N시간째 진행중
 몇몇 케이스가 이상하게 나옴.
+
+```python
+t = int(input())
+for test_case in range(1,t+1):
+    a, b = map(int, input().split())
+    a_list = list(map(int, input().split()))
+    b_list = list(map(int, input().split()))
+    
+    if a < b:
+        n1 = b
+        n2 = a
+    else:
+        n1 = a
+        n2 = b`
+    sum = []
+    
+    if a < b:
+        for i in range(b-a+1):
+            k = 0
+            for j in range(a):
+                k += a_list[j] * b_list[j+i]
+                sum.append(k)
+        sum.sort()
+        print(f'#{test_case} {sum[-1]}')
+        print(sum)
+    elif a > b: # a > b
+        for i in a_list:
+            k = 0
+            for j in range(b):
+                k += b_list[j] * a_list[j+i]
+                sum.append(k)
+        sum.sort()
+        print(f'#{test_case} {sum[-1]}')
+    else:
+        for i in range(a):
+            k = 0
+            k += a_list[i] * b_list[i]
+            sum.append(k)
+        sum.sort()
+        print(f'#{test_case} {sum[-1]}')
+```
+퇴실 전 마지막 - 강사님 도움받은 것
+sum 값 체크해보기
