@@ -239,3 +239,44 @@ for test_case in range(1,t+1):
 ```
 퇴실 전 마지막 - 강사님 도움받은 것
 sum 값 체크해보기
+
+### 2023.07.16 (Dom, 일요일)
+```python
+SWEA 1959!
+t = int(input())
+for test_case in range(1,t+1):
+    a, b = map(int, input().split())
+    a_list = list(map(int, input().split()))
+    b_list = list(map(int, input().split()))
+    sum = []
+    if a < b:
+        for i in range(b-a+1):
+            k = 0
+            for j in range(a):
+                k += a_list[j] * b_list[j+i]
+            sum.append(k)
+        # sum.sort()
+    elif a > b: # a > b
+        for i in range(a-b+1):
+            k = 0
+            for j in range(b):
+                k += b_list[j] * a_list[j+i]
+            sum.append(k) # 기존에는 매번 집어넣었기에 합계가 아니었음
+            #한번 (작은 칸 곱) 끝날때 합계만 리스트에 넣는다는 뜻
+        # sum.sort()
+    else:
+        for i in range(a):
+            k = 0
+            k += a_list[i] * b_list[i]
+        sum.append(k)
+    sum.sort()
+    print(f'#{test_case} {sum[-1]}')
+```
+변경사항 : 
+```python
+sum.sort # 위치 변경
+print(f'#{test_case} {sum[-1]}') # 위치 변경
+# 마지막에 한번 정리, 출력하면 되는거니까 문제 X 마자막에 한번만.
+sum.append(k) # 자리 변경
+```
+PASS! 
