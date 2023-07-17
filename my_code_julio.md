@@ -162,7 +162,7 @@ newn = sorted(numbers)
 print(newn)
 ```
 간단(어려웠던) 실습. 함수의 소중함을 느끼게 만들지도 몰라요
-
+> swea - 사전학습 中
 ```python
 t = int(input())
 for test_case in range(1,t+1):
@@ -280,3 +280,5 @@ print(f'#{test_case} {sum[-1]}') # 위치 변경
 sum.append(k) # 자리 변경
 ```
 PASS! 
+
+### 2023_07_17
