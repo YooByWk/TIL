@@ -162,6 +162,7 @@ newn = sorted(numbers)
 print(newn)
 ```
 간단(어려웠던) 실습. 함수의 소중함을 느끼게 만들지도 몰라요
+>#### SWEA 1959!
 > swea - 사전학습 中
 ```python
 t = int(input())
@@ -196,7 +197,7 @@ for test_case in range(1,t+1):
 ```
 실패 N시간째 진행중
 몇몇 케이스가 이상하게 나옴.
-
+> #### SWEA 1959!
 ```python
 t = int(input())
 for test_case in range(1,t+1):
@@ -241,8 +242,8 @@ for test_case in range(1,t+1):
 sum 값 체크해보기
 
 ### 2023.07.16 (Dom, 일요일)
+> #### SWEA 1959!
 ```python
-SWEA 1959!
 t = int(input())
 for test_case in range(1,t+1):
     a, b = map(int, input().split())
