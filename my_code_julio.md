@@ -283,3 +283,27 @@ sum.append(k) # 자리 변경
 PASS! 
 
 ### 2023_07_17
+#### SWEA 1984 / D2
+
+```python
+TC = int(input())
+for tc in range(1,TC+1):
+    numbers = list(map(int, input().split()))
+    # print(numbers) #실험용
+    #for -> if 로 하나씩 대소관계 파악하고 임시저장 > 최대값
+    ahora_max = -1    #조건보다 1 작게함 = 항상 얘보다 큰놈만 나옴
+    ahora_min = 10001 #조건보다 1 크게함 = 항상 얘보다 작은놈만 나옴
+    temporal = 0      #계산 임시 저장용
+    for i in numbers:
+        if i > ahora_max: # 최대
+            ahora_max = i
+        if i < ahora_min: # 최소 
+            ahora_min = i
+        temporal += i  #리스트 요소 하나씩 더해줌
+    temporal = int((temporal - (ahora_max + ahora_min)) / (len(numbers)-2)+0.5)
+    # 답 계산해주고
+    
+    print(f'#{tc} {temporal}') #출력
+
+```
+함수 안쓰고 Pass 
