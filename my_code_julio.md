@@ -154,7 +154,7 @@ if pos< l:
     print(f'numbers의 {[pos]}에 0이 있음')
 else:
     print('no hay 0')
-
+#0 위치찾기
 
 numbers = [3, 4, 2, 8, 10, 2]
 print(max(numbers), max(2,3, 4, 1))
@@ -306,4 +306,4 @@ for tc in range(1,TC+1):
     print(f'#{tc} {temporal}') #출력
 
 ```
-함수 안쓰고 Pass 
+함수 안쓰고 Pass 라고 하려했으나 len() 써버림
