@@ -338,3 +338,179 @@ result = list(map(lambda x : x* 2,numbers))
 print(result) # [2, 4, 6, 8, 10]
 #명시적이지는 않음.
 ```
+팩토리얼!
+```python
+# 5! = 5 * 4!
+def factorial(n): #  n = 5
+    if n == 0:
+        return 1
+    t = n * factorial(n-1)
+    return t
+print(factorial(5)) #pos_argu
+# f(5) - f(4) -f(3) f(2) - f(1) 하나씩 하고 역순으로 return 받으며 끝
+
+복사 해보기
+def my_p(lst):
+    t = lst[::] 
+    t = list(lst) #복사-일시적으로 
+    t.append(10) #id : x
+    print(t)
+    return
+
+
+k = ['a', 'b'] #id : x
+
+my_p(k)
+print(k)
+
+---
+global 사용 O/X 사례
+res = 0 #넓-다.
+
+def double_a(a):
+    """
+    입력으로 정수를 하나 입력받아서 2를 곱한 결과 출력.
+    """
+    # global res # 전역으로 
+    t = a*2
+    res = t # 지역 번수임
+    return t # 지역 변수 res= t 소멸
+
+var_a = 10
+res = double_a(var_a) # global 안쓰려고 res의 값을 함수 돌려서 받음.
+print(res)
+```
+
+작업하시오
+```python
+#ws_3_5.py
+
+import book
+
+number_of_people = 0
+
+
+def increase_user():
+    global number_of_people
+    number_of_people += 1
+
+
+
+
+
+
+def create_user(name, age, address):
+    global user_info
+    user_info = {'name': name , 'age': age , 'address' : address}
+    print(f'{name}님 환영합니다!')
+    increase_user()
+    return user_info #이거 중요
+    
+ #여기까지 완료. 환영합니다!
+
+
+def rental_book(info):
+    aa = {'name': name, 'age' : age}
+    book.decrease_book(age//10)
+
+    print(f'{name}님이 {age//10}권의 책을 대여하였습니다.')
+
+
+name = ['김시습', '허균', '남영로', '임제', '박지원']
+age = [20, 16, 52, 36, 60]
+address = ['서울', '강릉', '조선', '나주', '한성부']
+
+many_user = list(map(create_user, name, age, address))
+
+# print(many_user) 
+# [{'name': '김시습', 'age': 20, 'address': '서울'},
+#  {'name': '허균', 'age': 16, 'address': '강릉'}, 
+#  {'name': '남영로', 'age': 52, 'address': '조선'}, 
+#  {'name': '임제', 'age': 36, 'address': '나주'}, 
+#  {'name': '박지원', 'age': 60, 'address': '한성부'}]
+
+#info {name : age}
+
+info3 = list(map(lambda x : {'name': x['name'], 'age' : x['age']}, many_user))
+print(info3)
+
+rental_book(info3)
+
+
+# print(info3)
+
+# print(type(info3))
+
+# info = list(map(lambda x, y : {x['name'] : y['age']}, many_user, many_user)) 
+
+# print(info)
+# inffo = list(map(lambda x : {'name' :x['name']})
+
+# A = list(map(lambda x : x['name'], many_user))
+# # print(A)
+# B = list(map(lambda y : y['age'], many_user))
+# info_tst = dict(zip(A,B))
+# print(info_tst)
+
+# print(map(rental_book, info_tst, info_tst))
+
+
+# '''
+# def create_user(name, age, address):
+#     global user_info
+#     user_info = {'name': name , 'age': age , 'address' : address}
+#     # print('현재 가입 된 유저 수 :',number_of_people) # 가입유저수
+#     print(f'{name}님 환영합니다!')
+#     # print(user_info)
+#     increase_user()
+#     # print('현재 가입 된 유저 수 :',number_of_people)
+#     # k.append(user_info) 
+#     return user_info
+
+# import book
+# def rental_book(nombre, cantidad):
+#     rnt_info = {}
+#     rnt_info['이름'] = nombre
+#     rnt_info['수량'] = cantidad
+#     book.decrease_book(cantidad)
+#     print(f'{nombre}님이 {cantidad}권의 책을 대여하였습니다.')
+
+# rental_book('홍길동', 3)
+
+
+---
+
+# book.py
+number_of_book = 100
+
+def decrease_book(age):
+    global number_of_book
+    r = age // 10 
+    print(f'남은 책의 수 : {r}')
+
+# decrease_book(15) ?
+
+
+
+# ws_3_3.py
+import book
+def rental_book(nombre, cantidad):
+    rnt_info = {}
+    rnt_info['이름'] = nombre
+    rnt_info['수량'] = cantidad
+    book.decrease_book(cantidad)
+    print(f'{nombre}님이 {cantidad}권의 책을 대여하였습니다.')
+
+rental_book('홍길동', 3)
+
+
+# book.py 3-3 
+number_of_book = 100
+
+def decrease_book(x):
+    global number_of_book
+    r = number_of_book - x
+    print(f'남은 책의 수 : {r}')
+
+# decrease_book(15) ?
+```
