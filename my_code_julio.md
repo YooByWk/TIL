@@ -513,4 +513,46 @@ def decrease_book(x):
     print(f'남은 책의 수 : {r}')
 
 # decrease_book(15) ?
+
+
+20230719
+#ws_3_5.py
+
+import book
+number_of_people = 0
+number_of_book = book.number_of_book
+
+def increase_user():
+    global number_of_people
+    number_of_people += 1
+
+def create_user(name, age, address):
+    global user_info
+    user_info = {'name': name , 'age': age , 'address' : address}
+    print(f'{name}님 환영합니다!')
+    increase_user()
+    return user_info #이거 중요하겠지
+    
+#환영합니다! 포함됨
+
+def rental_book(info):
+    name = info['name']
+    num = info['age'] // 10
+    book.decrease_book(num)
+    print(f'{name}님이 {num}권의 책을 대여하였습니다.')
+
+
+name = ['김시습', '허균', '남영로', '임제', '박지원']
+age = [20, 16, 52, 36, 60]
+address = ['서울', '강릉', '조선', '나주', '한성부']
+
+many_user = list(map(create_user, name, age, address))
+print(many_user)
+info = list(map(lambda x : {'name' : x['name'], 'age' : x['age']}, many_user))
+# print(type(info))
+print(f'info = {info}')
+
+list(map(create_user, name, age, address))
+list(map(rental_book, info))
+# 문제 해결!
 ```
