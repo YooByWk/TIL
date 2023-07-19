@@ -307,3 +307,34 @@ for tc in range(1,TC+1):
 
 ```
 함수 안쓰고 Pass 라고 하려했으나 len() 써버림
+
+
+## 2023_07_19 mie
+유용한 함수 
+```python
+nums = [1, 2, 3]
+result = map(str, numbers)
+
+print(result) # <map object at XX>
+print(list(result)) [1, 2, 3]
+
+result = []
+for number in numbers:
+    result.append(str(number))
+#둘이 같다. map 그는 신이야
+#순회 가능한 데이터구조의 모든 요소에 함수를 적용!
+#결과를 맵 오브젝트로 반환
+
+los_chicos = ['juan', 'mario']
+las_chicas = ['maria', 'ximena']
+pair = zip(los_chicos, las_chicas)
+print(pair)
+print(list(pair))
+
+#map + lambda
+# lambda 매개변수 : 표현식(,범위)
+numbers = [1, 2, 3, 4, 5]
+result = list(map(lambda x : x* 2,numbers))
+print(result) # [2, 4, 6, 8, 10]
+#명시적이지는 않음.
+```
