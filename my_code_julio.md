@@ -652,4 +652,100 @@ for i in rental_book:
         break 
     if check != False:  # 이부분이 안됨 잘
         print('모든 도서가 대여 가능한 상태입니다.')
+
+---
+# ws_4_3.py
+import requests
+from pprint import pprint as print
+
+dummy_data = []
+def user_list(x): 
+    for i in range(1, x+1):
+        API_URL = f'https://jsonplaceholder.typicode.com/users/{i}' # 무작위 유저 정보 요청 경로
+        # print(API_URL)
+        response = requests.get(API_URL)
+        parsed_data = response.json()
+        if -80 < float(parsed_data['address']['geo']['lat'])<80 and -80< float(parsed_data['address']['geo']['lng']):
+            dummy_data.append({'company' : parsed_data['company']['name'], 'lat': parsed_data['address']['geo']['lat'], 
+                               'lng': parsed_data['address']['geo']['lng'], 'name' : parsed_data['name']})
+    return dummy_data
+
+user_list(10)
+print(dummy_data)
+"""
+
+[{'company': 'Romaguera-Crona',
+  'lat': '-37.3159',
+  'lng': '81.1496',
+  'name': 'Leanne Graham'},
+  
+ {'company': 'Deckow-Crist',
+  'lat': '-43.9509',
+  'lng': '-34.4618',
+  'name': 'Ervin Howell'},
+
+ {'company': 'Romaguera-Jacobson',
+  'lat': '-68.6102',
+  'lng': '-47.0653',
+  'name': 'Clementine Bauch'},
+
+ {'company': 'Keebler LLC',
+  'lat': '-31.8129',
+  'lng': '62.5342',
+  'name': 'Chelsey Dietrich'},
+
+ {'company': 'Considine-Lockman',
+  'lat': '-71.4197',
+  'lng': '71.7478',
+  'name': 'Mrs. Dennis Schulist'},
+
+ {'company': 'Johns Group',
+  'lat': '24.8918',
+  'lng': '21.8984',
+  'name': 'Kurtis Weissnat'},
+
+ {'company': 'Hoeger LLC',
+  'lat': '-38.2386',
+  'lng': '57.2232',
+  'name': 'Clementina DuBuque'}]
+
+"""
+```
+```python
+# ws_4_4.py
+import requests
+from pprint import pprint as print
+
+dummy_data = []
+black_list = ['Hoeger LLC', 'Keebler LLC', 'Yost and Sons', 'Johns Group', 'Romaguera-Crona']
+
+def test(x): 
+    for i in range(1, x+1):
+        API_URL = f'https://jsonplaceholder.typicode.com/users/{i}' # 무작위 유저 정보 요청 경로
+        # print(API_URL)
+        response = requests.get(API_URL)
+        parsed_data = response.json()
+        if -80 < float(parsed_data['address']['geo']['lat'])<80 and -80< float(parsed_data['address']['geo']['lng']):
+            dummy_data.append({'company' : parsed_data['company']['name'], 'lat': parsed_data['address']['geo']['lat'], 
+                               'lng': parsed_data['address']['geo']['lng'], 'name' : parsed_data['name']})
+    return dummy_data
+
+def  create_user(dummy_data):
+    censored_user_list = {}
+    for user in dummy_data:
+        if censorship(user):
+            censored_user_list[user['company']] = [user['name']]
+    return censored_user_list
+
+def censorship(user):
+    if user['company'] in black_list:
+        print(f"{user['company']} 소속의 {user['name']} 은/는 등록할 수 없습니다.")
+        return False
+    else:
+        print('이상 없습니다.')
+        return True
+    
+
+test(10)
+print(create_user(dummy_data))
 ```
