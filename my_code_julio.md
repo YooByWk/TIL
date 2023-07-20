@@ -590,11 +590,7 @@ for i in range(0,10):
 
 # 리스트 만들기 3가지 방법의 비교 
 # ej : 정수 1, 2, 3을 가지는 새로운 리스트 만들기
-# 상황별로 걍 편하게 쓰세요
-# 속도만 따지면 '대부분'의 상황에서는 compre가 빠르다.
-# 하지만 다른 함수, 내장함수에 따라 map이 더 빠른 경우도 많았다.
-# Python 3.X (후반에) for loop 성능에 비약적 향상이 있었다.
-# 극단적 차이는 X.
+
 numbers = ['1', '2', '3']
 # 1. for loop
 new_numbers = []
@@ -609,4 +605,51 @@ print(new_numbers_2)
 # 3. list comprehension - 굳이?
 new_numbers_3 = [int(number) for number in numbers]
 print(new_numbers_3)
+
+
+
+# enumerate 인덱스 뽑아줌
+fruits = ['apple', 'banana', 'cherry']
+for index, fruit in enumerate(fruits):
+    print(f'인덱스 {index} : {fruit}')
+# 인덱스 0 : apple
+# 인덱스 1 : banana
+# 인덱스 2 : cherry
+
+# enumerate
+result = ['a', 'b', 'c']
+print(enumerate(result))  # <enumerate object at 0x0000020114BC4BC0>
+print(list(enumerate(result))) # [(0, 'a'), (1, 'b'), (2, 'c')] - tuple
+
+for index, elem in enumerate(result): # tuple 언패킹
+    print(index, elem) # 0 a // # 1 b // # 2 c
+
+```
+4-5 꼭 제출은 아님 놀지만 마슈
+
+누더기눠둬기 0720 실습중
+```python
+list_of_book = ['장화홍련전','가락국 신화','온달 설화','금오신화','이생규장전','만복자서포기','수성지','백호집','원생몽유록','홍길동전','장생전','도문대작','옥루몽','옥련몽']
+
+rental_book = ['장생전','원생몽유록','이생규장전','장화홍련전','수성지','백호집','난중일기','홍길동전','만복자서포기']
+# rental_book = ['유자소전'] # else 실험
+# rental_book = ['난중일기'] # 없는 책 실험
+# rental_book = []
+# 1. 목록 / 대여중 두개 
+# 2. rental 이 list에 있으면 
+# 대여 불가.
+# 모든 도서 있다면 대여 가능 상태
+check = True
+for i in rental_book: 
+    if i in list_of_book: 
+        print(f'{i} 은/는 보유하고 있지 않습니다.')
+        break
+        # 1. 안되는 것
+        # 2. 
+    else: #없으면
+        check = False
+        print(f'{i} 은/는 보유하고 있지 않습니다.')
+        break 
+    if check != False:  # 이부분이 안됨 잘
+        print('모든 도서가 대여 가능한 상태입니다.')
 ```

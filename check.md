@@ -26,3 +26,6 @@ git 정리할 문서
 se nos parece que estudiamos un idioma que se llama 'python' pero, actualmente, estamos aprendiendo la capacidad d eentendimiento del idioma del programa generalmente.
 
 ★★ 단축평가 , 암시적행변환 , 얕/깊 복사 ★★
+
+
+pip installllll
