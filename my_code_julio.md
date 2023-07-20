@@ -557,3 +557,56 @@ list(map(create_user, name, age, address))
 list(map(rental_book, info))
 # 문제 해결!
 ```
+
+```python
+# 실습
+# 리스트 만들기 0~9
+# 방법 1
+new_list = []
+for i in range(0,10):
+    if i % 2 == 1:
+        new_list.append(i) #i를 range만큼 넣음.
+
+# 2. list comprehension  (to make new list.)
+new_list_2 = [i for i in range(10) if i % 2 == 1]
+print(new_list_2)
+
+nums = [1, 2, 3, 4, 5]
+sqn = [num**2 for num in number]
+print(sqn) # [1, 4, 9, 16, 25]
+
+---
+new_list_3 = [i if i % 2 == 1 else str(i) for i in range(10)]
+# 홀수 정수, 짝수 문자열, elif 안됨 if if if if if if if if  됨 
+
+new_list3 = []
+for i in range(0,10):
+    if i % 2 == 1:
+        new_list.append(i) #i를 range만큼 넣음.
+    else: 
+        new_list.append(str(i)) #위 new list3랑 같지만 가독성 더 좋음
+
+----
+
+# 리스트 만들기 3가지 방법의 비교 
+# ej : 정수 1, 2, 3을 가지는 새로운 리스트 만들기
+# 상황별로 걍 편하게 쓰세요
+# 속도만 따지면 '대부분'의 상황에서는 compre가 빠르다.
+# 하지만 다른 함수, 내장함수에 따라 map이 더 빠른 경우도 많았다.
+# Python 3.X (후반에) for loop 성능에 비약적 향상이 있었다.
+# 극단적 차이는 X.
+numbers = ['1', '2', '3']
+# 1. for loop
+new_numbers = []
+for number in numbers:
+    new_numbers.append(int(number))
+print(new_numbers)
+
+#2. map - 어쩔수없이 쓰게됨
+new_nmbers_2 = list(map(int, numbers))
+print(new_numbers_2) 
+
+# 3. list comprehension - 굳이?
+new_numbers_3 = [int(number) for number in numbers]
+print(new_numbers_3)
+```
