@@ -782,7 +782,7 @@ pd = response.json()
 
 # lng = geo['lng']
 
-
+```python
 todo_valor = []
 def val_todos(x):
     for i in range(1,x+1):
@@ -990,8 +990,8 @@ print(dummy_data)
   'lng': '57.2232',
   'name': 'Clementina DuBuque'}]
 
-"""
 ```
+
 ```python
 # ws_4_4.py
 import requests
@@ -1029,3 +1029,5 @@ def censorship(user):
 
 test(10)
 print(create_user(dummy_data))
+```
+
