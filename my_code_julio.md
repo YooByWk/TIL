@@ -749,3 +749,283 @@ def censorship(user):
 test(10)
 print(create_user(dummy_data))
 ```
+
+import requests
+from pprint import pprint as print
+
+# 무작위 유저 정보 요청 경로
+API_URL = 'https://jsonplaceholder.typicode.com/users/1'
+# API 요청
+response = requests.get(API_URL)
+# JSON -> dict 데이터 변환
+# parsed_data = response.json()
+pd = response.json()
+# 응답 데이터 출력
+# print(response)
+
+# # 변환 데이터 출력
+# print(parsed_data)
+# # 변환 데이터의 타입
+# print(type(parsed_data))
+
+# # 특정 데이터 출력
+# print(parsed_data['name'])
+# print(parsed_data['username'])
+# print(parsed_data['company']['name'])
+
+# print(pd['address'])
+# address = pd['address']
+
+# geo = address['geo']
+
+# lat = geo['lat']
+
+# lng = geo['lng']
+
+
+todo_valor = []
+def val_todos(x):
+    for i in range(1,x+1):
+        API_URL = f'https://jsonplaceholder.typicode.com/users/{i}'
+        print(API_URL)
+        address = pd['address'] #dict
+        geo = address['geo'] #dict
+        lat = geo['lat'] #str
+        lng = geo['lng'] #str
+        A = float(lat) 
+        B = float(lng)
+        if (A < 80) and (B > -80):
+            test = ({
+                'company' : pd['company']['name'], 'lat' : pd['address']['geo']['lat'],
+                'lng' : pd['address']['geo']['lng'] 
+                })
+            todo_valor.append(test)
+        else:
+            pass
+    return todo_valor
+todo_valor = []
+# # # dummy_data = []
+val_todos(10)
+print(todo_valor)
+
+
+
+import requests
+from pprint import pprint as print
+#무작위 유저 정보 요청 URL
+API_URL = 'https://jsonplaceholder.typicode.com/users/1'
+# API 요청
+response = requests.get(API_URL)
+# JSON -> dict 데이터 변환
+# parsed_data = response.json()
+pd = response.json()
+
+# 응답 데이터 출력
+# print(response)
+
+# 변환 데이터 출력
+# print(parsed_data)
+# # 변환 데이터의 타입
+# print(type(parsed_data))
+# print(parsed_data[1]['name'])
+
+# for k in range(11):
+#     API_URL += str(k)
+#     valor_name = []
+#     valor_name.append(({'name': parsed_data}))
+# print('------')
+# print(valor_name)
+
+def call_n_save(x):
+    dummy_data = []
+    
+    for i in range(1,x+1):
+        API_URL = 'https://jsonplaceholder.typicode.com/users/'
+        API_URL += str(i)
+        name = pd['name']
+        lat = pd['address']
+        lng = 
+        company =
+        user = {'name' : name, 'lat' : lat }
+    return user
+
+#입력 : 사용자 정보 리스트
+
+dummy_data = []
+for i in range(1,11):
+    user = call_n_save(i)
+    if 80 > user['lat'] and user['lng'] > -80:
+        dummy_data.append(user)
+
+#입력 :  한명의 정보
+ def censorship(info)
+    if info in blacklist:
+        return False
+    else:
+
+        return True
+
+
+
+
+
+
+def create_user(dummy_data):
+censored_user_list = {} # 딕셔너리 초기화
+for info in dummy_data:
+    if censorship(info):
+        company = info['company']
+        name
+    
+    if company in censored_user_list:
+        company.append(info)
+    else:
+        censored_user_list[company] = [name] # 리스트로 데이터 하나 넣었음
+
+
+# valor_name
+# valor_lat
+# valor_lng
+# valor_company_name
+# print(pd)
+# print(float(k) < 80)
+# print(type(pd['address']['geo']['lat']))
+
+address = pd['address']
+geo = address['geo']
+lat = geo['lat']
+lng = geo['lng']
+print(type(address))
+print(lat)
+print(type(lng))
+def val_todos(x):
+    for i in range(1,x+1):
+        API_URL = f'https://jsonplaceholder.typicode.com/users/{i}'
+        print(API_URL)  #확인완료
+        print(pd['address']['geo']['lat'])
+        A = float(pd['address']['geo']['lat'])
+        B = float(pd['address']['geo']['lng'])
+        print(A, B)
+        if (A < 80) and (B > -80):
+            todo_valor = {
+                'company' : pd['company']['name'], 'lat' : pd['address']['geo']['lat'],
+                'lng' : pd['address']['geo']['lng'] 
+                }
+        else:
+            pass
+    return todo_valor
+todo_valor = []
+# # # dummy_data = []
+val_todos(10)
+print(todo_valor)
+
+
+# 백업        
+#  if ((float(pd['address']['geo']['lat'])) < 80) and ((float(pd['address']['geo']['lng'])) > -80):
+
+# censored_user_list  = {'사명' : 'A', 'B', 'ㄱㄱ' : 'C'}
+
+censored_user_list = {} # 딕셔너리 초기화
+for info in dummy_data:
+    company = info['company'] 
+    name etc...
+    if company in censored_user_list:
+        company.append(info)
+    else:
+        censored_user_list[company] = [name] # 리스트로 데이터 하나 넣었음g
+
+
+# ws_4_3.py
+import requests
+from pprint import pprint as print
+
+dummy_data = []
+def user_list(x): 
+    for i in range(1, x+1):
+        API_URL = f'https://jsonplaceholder.typicode.com/users/{i}' # 무작위 유저 정보 요청 경로
+        # print(API_URL)
+        response = requests.get(API_URL)
+        parsed_data = response.json()
+        if -80 < float(parsed_data['address']['geo']['lat'])<80 and -80< float(parsed_data['address']['geo']['lng']):
+            dummy_data.append({'company' : parsed_data['company']['name'], 'lat': parsed_data['address']['geo']['lat'], 
+                               'lng': parsed_data['address']['geo']['lng'], 'name' : parsed_data['name']})
+    return dummy_data
+
+user_list(10)
+print(dummy_data)
+"""
+
+[{'company': 'Romaguera-Crona',
+  'lat': '-37.3159',
+  'lng': '81.1496',
+  'name': 'Leanne Graham'},
+  
+ {'company': 'Deckow-Crist',
+  'lat': '-43.9509',
+  'lng': '-34.4618',
+  'name': 'Ervin Howell'},
+
+ {'company': 'Romaguera-Jacobson',
+  'lat': '-68.6102',
+  'lng': '-47.0653',
+  'name': 'Clementine Bauch'},
+
+ {'company': 'Keebler LLC',
+  'lat': '-31.8129',
+  'lng': '62.5342',
+  'name': 'Chelsey Dietrich'},
+
+ {'company': 'Considine-Lockman',
+  'lat': '-71.4197',
+  'lng': '71.7478',
+  'name': 'Mrs. Dennis Schulist'},
+
+ {'company': 'Johns Group',
+  'lat': '24.8918',
+  'lng': '21.8984',
+  'name': 'Kurtis Weissnat'},
+
+ {'company': 'Hoeger LLC',
+  'lat': '-38.2386',
+  'lng': '57.2232',
+  'name': 'Clementina DuBuque'}]
+
+"""
+```
+```python
+# ws_4_4.py
+import requests
+from pprint import pprint as print
+
+dummy_data = []
+black_list = ['Hoeger LLC', 'Keebler LLC', 'Yost and Sons', 'Johns Group', 'Romaguera-Crona']
+
+def test(x): 
+    for i in range(1, x+1):
+        API_URL = f'https://jsonplaceholder.typicode.com/users/{i}' # 무작위 유저 정보 요청 경로
+        # print(API_URL)
+        response = requests.get(API_URL)
+        parsed_data = response.json()
+        if -80 < float(parsed_data['address']['geo']['lat'])<80 and -80< float(parsed_data['address']['geo']['lng']):
+            dummy_data.append({'company' : parsed_data['company']['name'], 'lat': parsed_data['address']['geo']['lat'], 
+                               'lng': parsed_data['address']['geo']['lng'], 'name' : parsed_data['name']})
+    return dummy_data
+
+def  create_user(dummy_data):
+    censored_user_list = {}
+    for user in dummy_data:
+        if censorship(user):
+            censored_user_list[user['company']] = [user['name']]
+    return censored_user_list
+
+def censorship(user):
+    if user['company'] in black_list:
+        print(f"{user['company']} 소속의 {user['name']} 은/는 등록할 수 없습니다.")
+        return False
+    else:
+        print('이상 없습니다.')
+        return True
+    
+
+test(10)
+print(create_user(dummy_data))
