@@ -1031,3 +1031,129 @@ test(10)
 print(create_user(dummy_data))
 ```
 
+# ws_6_1.py
+
+# 아래 함수를 수정하시오.
+def union_sets(X, Y):
+    XY = X | Y
+    return XY 
+result = union_sets({1, 2, 3}, {3, 4, 5})
+# print(result)
+
+# # ws_6_2.py
+
+# 아래 함수를 수정하시오.
+def get_value_from_dict(dictname, key):
+    return dictname.get(key)
+
+my_dict = {'name': 'ASDFSDSFSDSDAWWD', 'age': 25}
+result = get_value_from_dict(my_dict, 'name')
+print(result) # Alice
+ws_6_3.py
+
+# 아래 함수를 수정하시오.
+def intersection_sets(A, B):
+    # return A & B
+    return A.intersection(B)
+result = intersection_sets({1, 2, 3}, {3, 4, 5})
+print(result) # {3}
+
+ws_6_4.py
+
+# 아래 함수를 수정하시오.
+def get_keys_from_dict(mad):
+    return list(mad.keys())
+
+my_dict = {'name': 'Alice', 'age': 25, "country" : "N"}
+result = get_keys_from_dict(my_dict)
+print(result)
+
+
+# ws_6_5.py
+
+# 아래 함수를 수정하시오.
+def difference_sets(A, B):
+    # return A.difference(B)
+    return A-B
+result = difference_sets({1, 2, 3}, {3, 4, 5})
+print(result)
+
+# hw_6_2.py
+
+# 아래 함수를 수정하시오.
+def remove_duplicates_to_set(RS):
+    #return set(RS)
+    new_set = set()
+    for i in RS:
+        if i not in new_set:
+#             new_set.update([i])
+#     return new_set         
+# result = remove_duplicates_to_set([1, 2, 2, 3, 4, 4, 5])
+# print(result)
+# 아래 함수를 수정하시오.
+def remove_duplicates_to_set(RS):
+    #return set(RS)
+    new_set = set()
+    for i in RS:
+        if i not in new_set:
+            new_set.update([i])
+    return new_set         
+result = remove_duplicates_to_set([1, 2, 2, 3, 4, 4, 5])
+print(result)
+
+
+
+# 아래 함수를 수정하시오.
+def add_item_to_dict(dict_name, input1, value):
+    new_dict = dict_name.copy() # 문제 새로운 딕셔너리로 반환하기
+    new_dict.update({input1: value})
+    return new_dict
+
+my_dict = {'name': 'Alice', 'age': 25}
+result = add_item_to_dict(my_dict, 'ASdsdsdasdasdasa', 'ASDAASDASA')
+print(result)'
+
+
+# D2 : SWEA. 2357. [AtCoder Beginner Contest 073] A. September 9
+T = int(input())
+for test_case in range(1,T+1):
+    K = str(int(input()))
+    a = []
+    d9 = False
+    for i in K: #리스트에 암튼 리스트에
+        a.append(i)
+        if int(i) % 9 == 0 and int(i) != 0:
+            d9 = True
+    if d9 == True:
+        print(f'#{test_case} Yes')
+    else:
+        print(f'#{test_case} No')
+
+
+T = int(input()) #테스트 케이스 
+for test_case in range(1, 1+T):
+    seats = [0] * 100000
+    N = int(input()) # 아마도 손님 그룹의 수
+    for N in range(1, N+1): 
+        ocupado = list(map(int, input().split())) #그룹 나누기?
+        for asu in range(ocupado[0],ocupado[1]+1): # ~부터 ~까지
+            seats[asu] = 1 # 그 자리 1로 만들어줌
+    print(f'#{test_case} {seats.count(1)}') # 출력
+
+
+print(ocupado)
+
+    
+T = int(input()) #테스트 케이스 
+for test_case in range(1, 1+T):
+    N = int(input()) # n개를 입력받을 예정
+    my_lst = []
+    for i in range(1,N+1):
+        a = int(input())
+        if a not in my_lst:
+            my_lst.append(a)
+        else:
+            my_lst.remove(a)
+    print(f'#{test_case} {len(my_lst)}')
+
+

@@ -42,29 +42,29 @@ print(numbers[-1 : -4 : -1]) # [9, 7, 5]
 a = 'adasd'
 k = ''.join(reversed(a)) # 하나의 스트링으로 바꿔준다.
 print(k)
+````
+# def reverse_string(X):
+#     # 
+#     K = list(X)
+#     K.reverse()
+#     return ''.join(K)
+#     #
+#     new_string reserved(X)
+#     return ''.join(X)
+#     #
+#     new_str = ''
+#     for c in X:
+#         K = c + X
+#     return K
+#     #
+#     return X[::-1]
 
-def reverse_string(X):
-    # 
-    K = list(X)
-    K.reverse()
-    return ''.join(K)
-    #
-    new_string reserved(X)
-    return ''.join(X)
-    #
-    new_str = ''
-    for c in X:
-        K = c + X
-    return K
-    #
-    return X[::-1]
 
-
-result = reverse_string("Hello, World!")
-print(result)
+# result = reverse_string("Hello, World!")
+# print(result)
 
 #ws 2 
-
+````
 def remove_dup(ori):
     new_lst = []
     for n in ori:

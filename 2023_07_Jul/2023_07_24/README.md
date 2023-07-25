@@ -52,8 +52,8 @@ s.title()
 아무튼 공식문서 가서 보자.
 
 ### 문자열 조작 메서드 (새 문자열 반환)
-- [ ] BNF 표기법 알아보기
-- [ ] EBNF 표기법도 알아보기
+- [ ] [BNF 표기법 알아보기](https://ko.wikipedia.org/wiki/%EB%B0%B0%EC%BB%A4%EC%8A%A4-%EB%82%98%EC%9A%B0%EB%A5%B4_%ED%91%9C%EA%B8%B0%EB%B2%95)
+- [ ] [EBNF 표기법도 알아보기](https://ko.wikipedia.org/wiki/EBNF)
 ```python
 s.replace(old, new [,count])
 # [,count]선택인자. 얘는 파이썬 문법 아님...
