@@ -35,16 +35,13 @@ for _ in range(1):
     i = list(map(int, input().split()))
     r.append(i)
 print(r)
-r = [list(map(int, input().split()))for _ in range(1)]
 
+r = [list(map(int, input().split()))for _ in range(1)]
 print(r)
 
-# s = [1, 1, 1]
-s = [[1] * 3 ]* 3
+s = [[1] * 3 ]* 3 # s = [1, 1, 1]
 print(s)
-
-
-s[0][1] = 100
+s[0][1] = 100 # 얕복당함 ㄴㄴ;;
 print(s)
 
 
