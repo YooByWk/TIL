@@ -1,0 +1,19 @@
+T = int(input())
+for t in range(1, T+1):
+    n, m = map(int, input().split())
+    lista = list(map(int, input().split()))
+    listaS = [0]
+    temp = 0
+    for i in lista:
+        temp = temp + i
+        listaS.append(temp)
+
+    salta = []
+    for i in range(0, len(listaS)-m): # 내가 한건데 모르겠음 왜 이 범위인지
+        temp2 = listaS[i+m] - listaS[i]
+        salta.append(temp2)
+
+    resulta = max(salta) - min(salta)
+    print(f'#{t} {resulta}')
+    # print(listaS)
+    # print(salta)
