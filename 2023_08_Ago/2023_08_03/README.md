@@ -98,3 +98,8 @@ def select(arr, k):
             arr[i], arr[minIndex] = arr[minIndex], arr[i]
     retrun arr[k-1]
 ```
+
+
+[이전](../../2023_08_AGO/2023_08_02/README.md)
+
+[다음](../../2023_08_AGO/2023_08_04/README.md)
