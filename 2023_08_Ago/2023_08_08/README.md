@@ -71,3 +71,6 @@ def BruteForce(p,t):
 ### Brute Force 
 해당 패턴이 있나? 몇 번 반복되나? 
 
+[이전](../../2023_08_AGO/2023_08_07/README.md)
+
+[다음](../../2023_08_AGO/2023_08_09/README.md)
