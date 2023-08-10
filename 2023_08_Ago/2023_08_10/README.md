@@ -67,14 +67,83 @@ DFS(v)
 ```
 
 #### DFS 예
+
+![A](A.png)
 1) 정점 A를 시작으로 깊이 우선 탐색
     ```py
     #A 방문:
     visited[A] = True
     ```
-    [A](A.png)
 2) 정점 A에 방문하지 않은 B,C 있으므로 A를 스택에 push, 인접정점 B와 C 중에 오름차순에 따라 B 를 선택, 탐색 진행
 3) b에 D, E 있음 -- > B push, 인접정점 D 선택, 탐색
 4) D에 미방문 정점 F 있음 --> D push, F 선택, 탐색
 5) F에 미방문 E G 있음 --> F push, E 선택, 탐색
-6) 
+6) C에 미방문 없음. 스택에서 pop, E로 이동 (뒷걸음...) E에 미방문 있는지 확인
+7) E에 미방문 없음 스택에서 pop F로 이동
+8) F에 미방문 G  --> F push, G로 이동
+
+#### ejemplo 2
+
+```py
+def dfs(s):
+    ST = []
+    visited = [False] *(N+1)
+    ST.append(s)
+    while ST:
+        v = ST.pop()
+        if not visited[v]:
+            print(v)
+            visited[v] = True
+        for w in G[v]:
+            if not visited[w]:
+                ST.append(w)
+
+def dfs1(s):
+    # 지난 길을 넣거나
+    # 갈림길을 넣거나.
+    ST = [] # 스택 준비하기
+    visited = [False] * (N+1)
+    ST.append(s)
+    visited[s] = True
+    while ST:
+        v = ST.pop()
+        # if not visited[v]:
+        print(v)
+            # visited[v] = True
+        for w in G[v]: # [2, 3] 들어오는데 2 3 한번씩
+            if not visited[w]:
+                ST.append(w)
+                visited[w] = True
+        # for d in range(4):"
+        newX, newY = ...
+
+N = 7
+S = '1,2,1,3,2,4,2,5,4,6,5,6,6,7,3,7'
+lst = list(map(int, S.split(',')))
+#print(lst)
+G = [[] for _ in range(N+1)]
+for idx in range(0,len(lst), 2):
+    v1 = lst[idx]
+    v2 = lst[idx+1]
+    G[v1].append(v2)
+    G[v2].append(v1)
+
+print(G)
+
+dfs(1) # 1에서 dfs 시작
+'''
+G = [
+    [],
+    [2,3], # 1
+    [1, 4, 5], # 2
+    [1, 7], # 3
+    [2, 6],
+    [2, 6],
+    [4, 5, 7],
+    [3, 6]
+]
+'''
+
+```
+
+#### 인접행렬?
