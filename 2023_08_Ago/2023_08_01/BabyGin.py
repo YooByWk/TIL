@@ -21,3 +21,4 @@ for i0 in range(n):
 #웩
 #Greedy가 항상 통하지는 않는다. . .
 # Baby-gin
+
