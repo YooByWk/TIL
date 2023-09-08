@@ -7,3 +7,4 @@
   검색 엔진 최적화
   SEO checker 
 - 종류 : header nav
+VScode live server extension
