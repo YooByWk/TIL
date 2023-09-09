@@ -1,0 +1,134 @@
+*{
+  font-family: 'Diphylleia', serif;
+  /* background-color: grey; */
+  /* margin: 0px; */
+  cursor: url(./images/cur2.png), auto;
+}
+.test {
+  background-color: black;
+}
+.container {
+  min-height: 300px;
+  height: 800px;
+  position:relative;
+  padding: 0;
+  background: #000 url('./images/header_img.jpg') no-repeat center center;
+}
+
+.container p {
+  color: white;
+}
+
+.header_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  /* object-position: center; */
+  top: 0;
+  left: 0;
+
+}
+/* front page classes */
+.frontpage {
+  min-height: 800px;
+  /* background-color:lightblue; */
+  
+}
+
+.und_b {
+  border-bottom: 5px solid  grey;
+}
+
+.about {
+
+}
+
+/* classes of intro */
+
+.intro {
+  min-height: 500px; 
+    /* background-color:lightblue; */
+  background-color: #87CEEB;
+  position: relative;
+}
+
+.intro img {
+  width: 25%;
+  margin-left:1%;
+  border-radius: 10%;
+  max-height: 400px;
+}
+.intro div {
+  position: absolute;
+}
+/*  */
+.project {
+  min-height: 500px;
+    /* background-color:lightblue; */
+  background-color:  #1c1c96af;
+  color: white;
+  img {
+    width:30%;
+  }
+}
+
+
+
+/*  */
+.skills {
+  min-height: 500px;
+    /* background-color:lightblue; */
+    /* background-color:  #; */
+  
+}
+
+.div_tst {
+  width: 135%;
+}
+
+
+/*  */
+.footer {
+  height: 40px;
+  background-color:rgba(255, 255, 255, 0.278);
+  color:black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 1. not-provided 클래슥를 기본적으로는 보이지 않게 설정 */
+.not-provided {
+  display: none;
+}
+.about_img {
+  height: 170px;
+  width: 200px;
+}
+
+.from {
+  min-height: 30px;
+}
+
+/* 2. 470px 밑으로 가면 not-provided 만 보이게 설정 */
+@media (max-width:470px) {
+  header,
+  main,
+  section,
+  .navbar,
+  footer,
+  .from{
+    /* 왜 important가 있어야 하는가 생각해보기 */
+    display: none !important;
+    min-height: 300px;
+  }
+  .not-provided{
+    display: block ;
+  }
+}
+/* 여기까지  */
+
