@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts 적용 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+  <!-- Bootstrap 적용 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <!-- css 파일을 읽어올 수 있게 -->
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <!--  네비 바 -->
+  <nav class="navbar bg-body-tertiary p-0 border border-black fixed-top">
+    <div class="container-fluid bg-secondary-subtle d-flex flex-row justify-content-between">
+      
+      <a class="navbar-brand m-0" href="#">Hoe
+        <img src="./images/ban.png" alt ="logo" width="30" height="24" class="">
+      </a>
+
+      <!-- 햄버거 메뉴 아이콘 ) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- 안접힌 상태 -->
+      <div class="collapse navbar-collapse bg-secondary-subtle" id="navbarNav">
+        <ul class="navbar-nav d-flex flex-column align-items-end ">
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#frontpage">Main</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#Intro">Intro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#project">project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#Skills">Skills</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--  헤더부분 -->
+  <div class="test">
+    <header class="header">
+      <div class="container d-flex justify-content-start align-items-end">
+        <!-- <img class="header_img" src="./images/header_img.jpg" alt=""> -->
+        <!-- 도전을 찾아가는 개발자를 꿈꿉니다 -->
+        <span class="text-white display-6 m-5">PJT1<br>ㅇㅂㅇ<br> <br>En busca de mi camino en la tecnología y el desarrollo <br></span>
+        <hr>
+      </div>
+    </header>
+  </div>
+  <!-- 메인 콘텐츠-->
+  <main id="frontpage" class="frontpage">
+    <p class="m-5 text-center display-3 fw-bold">
+      <img class="about_img me-3 " src="./images/book.png" alt="">
+      About me </p>
+    <hr class="und_b">
+    <div class="row m-5">
+      <div class="d-flex flex-column justify-content-center align-items-center col">
+        <img class="about_img rounded" src="./images/dino.jpg" alt="Dino">
+        <span class="fs-2 fw-bold m-2 border-bottom border-2 border-info"> 이름 </span>
+        <span class="m-3 fs-3 fw-bold"> 유병욱</span>
+      </div>
+      <div class="d-flex flex-column justify-content-center align-items-center col">
+        <img class="about_img" src="./images/march-10-icon.png" alt="b-day">
+        <span class="fs-2 fw-bold m-2 border-bottom border-2 border-info"> 생년월일</span>
+        <span class="m-3 fs-3 fw-bold"> 1998.03.10</span>
+      </div>
+      <div class="d-flex flex-column justify-content-center align-items-center col ">
+        <img class="about_img rounded" src="./images/ssafy.png" alt="b-day">
+        <span class="fs-2 fw-bold m-2 border-bottom border-2 border-info"> Now</span>
+        <span class="m-3 fs-3 fw-bold"> SSAFY</span>
+      </div>
+      <div class="d-flex flex-column justify-content-center align-items-center col">
+        <img class="about_img rounded" src="./images/dku.png" alt="b-day">
+        <span class="fs-2 fw-bold m-2 border-bottom border-2 border-info"> 학교</span>
+        <span class="m-3 fs-3 fw-bold"> 단국대학교</span>
+      </div>
+    </div>
+    <p class="text-center fs-4">lasciate ogni speranza voi ch'entrate</p>
+
+  </main>
+
+  <!-- 자기소개? 그냥 홍보용-->
+  <section id="Intro" class="intro">
+    <p class="display-3 text-center m-1 fw-bold">Intro!</p>
+    <div>
+      <img class="img-fluid float-start m-2" src="./images/panda.jpg" alt="">
+      <span class="fw-bold m-4 fs-3"><br>"<br>¡Hola! Estoy dando mis primeros pasos como desarrollador en SSAFY. ¡Acompáñame en este emocionante viaje tecnológico y de desarrollo! ¡Espero aprender mucho y convertirme en un desarrollador genial que cambie el mundo!  라고 적기는 했지만 대부분 저렇게 앉아있는게 전부일지도 몰라요</span>
+      <span><br></span>
+      <span class="d-flex justify-content-end fs-3 me-5 fw-bold">"</span>
+    </div>
+  </section>
+
+  <!-- 프로젝트 -->
+  <section id="project" class="project">
+    <p class="text-center display-3"> Language </p>
+    <div class="d-flex justify-content-evenly align-items-center">
+      <div>
+        <img src="./images/eng.png" alt="">
+        <p class="text-center fw-bold fs-3">English </p>
+      </div>
+      <div>
+        <img src="./images/esp.png" alt="">
+        <p class="text-center fw-bold fs-3">Español | Castellano</p>
+      </div>
+      <div>
+        <img src="./images/jap.png" alt="">
+        <p class="text-center fw-bold fs-3">日本語</p>
+      </div>
+    </div>
+    <p>no se que tengo que escribir aqui, por eso ahora estoy buscando un libro para copiar... siempre llenar algo es bastante dificil. creo que todos no les gusta hacerlo. nah Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum lacus nec mi imperdiet, ac rhoncus lectus aliquet. Fusce id elit ante. Donec lacus magna, ultricies at eros sit amet, dapibus auctor ligula. Nulla finibus, orci consequat congue laoreet, elit leo posuere sem, non venenatis felis erat a sapien. Sed lobortis et quam vitae lobortis. Morbi mollis sapien ut sollicitudin aliquet. Suspendisse potenti. Nulla tincidunt felis ac dolor accumsan pharetra. Vivamus fringilla tincidunt mattis. Aliquam dictum sed sapien vitae sagittis. Proin tempor metus justo, a gravida enim placerat sit amet. Nam consequat diam felis, in aliquet lorem tincidunt id. Donec semper ex vitae nibh tempor cursus.</p>
+
+  </section>
+
+
+  <!-- 기술 스택  -->
+  <section id="Skills" class="skills">
+    <p class="text-center display-3 fw-bold mb-3">Skills</p>
+  <div class="d-flex  justify-content-evenly align-items-center">
+    <div >
+      <img   class="div_tst" src="./images/python.png" alt="">
+    </div>
+    <div>
+      <img src="./images/git.png" alt="">
+    </div>
+    <div>
+      <img src="./images/html_css_js.png" alt="">
+    </div>
+  </div>
+
+  
+
+
+
+  </section>
+
+
+  <!-- 꼬리말 -->
+  <footer class="footer">Bienvenido</footer>
+  
+
+
+  <div class="from">
+    <a> Icon, images, etc. from</a>
+    <a href="https://www.freepik.com/icon/open-book_171322#fromView=keyword&term=Book&page=1&position=2">Icon by Freepik</a>
+  </div>
+  <!-- 반응형 웹 -->
+  <!-- @media 이 거 해 야 할 듯 ?  -->
+  <!-- 470px 이하는 웹 제공 안함 -->
+  <h1 class="not-provided">이 사이트는 470px 사이즈 미만에서는 보이지 않습니다.</h1>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

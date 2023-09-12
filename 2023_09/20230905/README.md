@@ -74,7 +74,7 @@ cross axis
 - dispaly : flex; 혹은 display: inlein-flex; 가 설정된 부모 요소
 - *이 컨테이너의 1차 자식 요소들이 Flex Item이 됨*
 - flexbox 속성 값들을 사용하여 자식 요소 flex item을 배치
-- 
+ 
 배치 
 flex-direction / flex-wrap
 공간분배 
