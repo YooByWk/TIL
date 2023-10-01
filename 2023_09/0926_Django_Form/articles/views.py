@@ -49,6 +49,7 @@ def create(request):
     # ! 반 ! 드 ! 시 ! POST 일때만 하세요 !!!!!!!
     else: # 헉 
         form = ArticleForm()
+        
     context = {
         'form': form,
     }
