@@ -33,7 +33,6 @@ def logout(request):
     auth_logout(request)
     return redirect('articles:index')
 
-@login_required
 def signup(request):
     # req method 에 따라서 역할이 두 개
     if request.method == "POST":
