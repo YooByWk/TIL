@@ -124,6 +124,13 @@ ORDER BY syntax
   - SELECT 키워드 바로 뒤, 고유한 값을 선택하려는 하나 이상의 필드 지정 ( 해당 필드는 중복 제거 )
 - WHERE (*if 같은걸까?*)
   - 조회 시 특정 검색 조건을 지정
+  - IS NULL IS NULL IS NULL IS NULL AND OR 
+  - IN 값이 특정 목록 안에 있는지 확인
+  - LIEK : 특정 패턴에 일치하는지 확인 ( Wildacards와 함께 사용)
+    - Wildcard Characters 
+      - '%' : 0 개 이상의 문자열과 일치하는지 확인 
+      - '_' : 단일 문자와 일치하는지 확인
+  -  BETWEEN NOT 
 - LIMIT
   - 조회하는 레코드 수를 제한
   - 하나 또는 두개의 인자를 사용 ( 0 또는 양의 정수 )
@@ -155,6 +162,12 @@ ORDER BY syntax
 #### GROUP BY
 레코드를 그룹화하여 요약본을 생성한다.
 - 집계 함수와 함께 사용.
+  - Aggregation Funcitions
+    - SUM
+    - AVG
+    - MAX
+    - MIN
+    - COUNT
 - 레코드를 뭔가 뭔가 합산 -> 요약본 생성
 
 Aggregation Functions / 집계 함수
@@ -177,3 +190,251 @@ Aggregation Functions / 집계 함수
 : 많은 이유 | 대체 공휴일. . . 
 
 SQL2는 알아서 하셈 ㅋ 
+
+: 님들 대체 오후에 뭐하셨나요? 
+# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?
+
+# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?
+
+# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?
+
+# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?
+
+# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?
+
+# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?
+
+# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?
+
+# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?
+
+# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?
+
+# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?# 오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?오후에 뭐하셨나요?
+
+# 공부합시다.
+
+## 오후 추정 물체 
+- Index 
+  - Managing Tables
+    - Create a atalbe
+    - Modifying table fields
+    - Delete a table
+  - Modifying Data
+    - Insert data
+    - Update data
+    - Delete data
+  - Multi table queries
+    - Join
+    - Joining tables
+
+DDL - Data Definition Language : 데이터의 기본 구조 및 형식 변경 // CREATE, DROP, ALTER
+### Create a table
+CREATE TABLE statement
+```SQL
+CREATE TABLE examples ( 
+-- examples 테이블 생성
+ExamId INTEGER PRIMARY KEY AUTOINCREMENT,
+LastName VARCHAR(50) NOT NULL,
+FirstName VARCHAR(50) NOT NULL
+);
+-- INTEGER / VARCHAR(50) = 데이터 타입
+-- PRIMARY KEY / NOT NULL = 제약 조건
+-- AUTOINCREMENT 키워드  
+
+PRAGMA table_info('examples');
+-- 테이블 스키마(구조) 확인
+```
+#### SQLite 데이터 타입
+1. NULL
+   - 아무런 값도 포함하지 않음
+2. INTEGER
+    - 정수
+3. REAL
+   - 부동 소수점
+4. TEXT
+   - 문자열
+5. BLOB
+   - 이미지, 동영상, 문서 등 바이너리 데이터
+
+#### Constraints : 제약조건
+- 테이블의 필드에 적용되는 규칙 또는 제한 사항
+- 데이터의 무결성을 유지하고 데이터 베이스의 일관성을 보장.
+
+대표적인 제약조건
+- PRIMARY KEY
+  - 해당 필드를 기본 키로 지정
+  - INTEGER 타입에만 적용, INT, BIGINT 등과 같은 정수 유형은 적용되지 않음
+- NOT NULL
+  - 해당 필드에 NULL 값을 허용하지 않도록 지정
+- FOREIGN KEY 
+  - 다른 테이블과의 외래 키 관계를 정의
+  - 
+#### AUTOINCREMENT keyword
+자동으로 고유한 정수 값을 생성하고, 할당하는 필드 속성
+- 필드의 자동 증가를 나타내는 특수 키워드
+- 주로 Primary key 필드에 적용
+- INTEGER PRIMARY KEY AUTOINCREMENT 가 작성된 필드는 항상 새로운 레코드에 대해 이전 최대 값보다 큰 값을 할당.
+- 삭제된 값은 무시되며, 재사용할 수 없게 됨
+
+### ALTER TABLE + DELETE TABLE
+ALTER TABLE statement : 테이블 및 필드 조작
+명령어:
+```SQL
+ALTER TABLE ADD COLUMN  -- 필드 추가 
+ALTER TABLE RENAME COLUMN -- 필드 이름 변경
+ALTER TABLE DROP COLUMN -- 필드 삭제
+ALTER TABLE RENAME TO -- 테이블 이름 변경
+----------------------------------------
+-- 1. 필드 만들기
+-- ADD COLUMN 키워드 이후 추가하고자 하는 새 필드 이름과 데이터 타입 및 제약조건 작성
+ALTER TABLE
+  examples
+ADD COLUMN
+  Country VARCHAR(100) NOT NULL;
+  -- Country라는 100자 제한을 가진 필드 생성
+  ----------------------------------------
+-- 2. RENAME
+-- 단일문을 사용하여 한번에 여러 필드를 추가할 수 없다.
+ALTER TABLE examples
+RENAME COLUMN Country TO pais;
+-- Country 에서 pais로 변경
+  ----------------------------------------
+-- 3. DROP COLUMN
+ALTER TABLE
+  table_name
+DROP COLUMN
+  current_name
+-- or
+ALTER TABLE examples --exmaples의 
+DROP COLUMN PostCode; -- PostCode 를 삭제하겠다.
+
+ALTER TABLE
+  talbe_name
+RENAME TO 
+  new_table_name;
+
+-- 3 Delete a table
+DROP TABLE table_name;
+-- DROP TABLE 이후 삭제할 테이블의 이름 작성
+-- examples 를 지운다면 ?
+DROP TABLE examples;
+
+```
+##### 타입 선호도 (Type Affinity)
+컬럼에 데이터 타입이 명시적으로 지정되지 않았거나 지원하지 않을 때, SQLite가 자동으로 데이터 타입을 추론하는 것
+
+![Alt text](image.png)
+
+**목적**
+1. 유연한 데이터 타입 지원
+   - 데이터 타입을 명시적으로 지정하지 않고도 데이터를 저장하고 조회 가능
+   - 컬럼에 저장되는 값의 특성을 기반으로 데이터 타입을 유추
+2. 간편한 데이터 처리
+   - INTEGER Type Affinity를 가진 열에 문자열 데이터를 저장해도 SQLite는 자동으로 숫자로 변환하여 처리
+3. SQL 호환성
+   - 다른 데이터베이스 시스템과 호환성을 유지
+
+반드시 NOT NULL 제약을 사용해야 하는가
+- NO
+- 하지만 데이터 베이스를 사용하는 프로그램에 따라 NULL 을 저장할 필요가 없는 경우가 많으므로 대부분 NOT NULL 을 정의
+- '값이 없다' 라는 표현을 테이블에 기록하는 것은 '0'이나, '빈 문자열' 등을 사용하는 것으로 대체하는 것을 권장
+
+### Modifying Data
+DML : Data Manipulation Language
+- INSERT / UPDATE / DELETE
+
+#### INSERT
+테이블 레코드 삽입
+```SQL
+INSERT INTO table_name (c1, c2, ...)
+-- INSERT INTO 절 다음에 테이블 이름과 괄호 안에 필드 목록 작성 
+VALUES (v1, v2, ...)
+-- VALUES 키워드 다음 괄호 안에 해당 필드에 삽입할 값 목록 작성
+
+INSERT INTO
+  articles (title, content, createdAt)
+VALUES
+    ('hello', 'world', '2000-01-01');
+    -- 여러줄 되는듯
+-- DATE 함수 ARTICLES 테이블에 뭔가 뭔가 해볼것
+INSERT INTO
+  articles (title, content, createdAt)
+Values
+  ('mytitle', 'mycontent', DATE());
+  -- 혼자 쓲싺쓲싺 해줘요
+```
+### Update data
+UPDATE statement : 테이블 레코드 수정
+```SQL
+-- 기본구조
+UPDATE table_name
+SET column_name  = expression,
+WHERE
+  condition;
+-- where 절에서 수정 할 레코드를 지정하는 조건
+-- where 절이 없다면, 모든 레코드를 수정
+-- ej.
+UPDATE articles
+SET title = 'update Title' 
+WHERE id = 1;
+--ej2
+UPDATE articles
+SET 
+  title = 'update Title',
+  content = 'update Content'
+WHERE
+  id = 2;
+```
+DELETE statement 테이블 레코드 삭제
+- delete from 절 다음에 테이블 이름 작성
+- where 절에서 삭제할 레코드를 지정하는 조건 작성
+- where 절을 작성하지 않으면 모든 레코드 삭제
+
+```SQL
+DELETE FROM table_name
+WHERE 
+  condition;
+
+-- ej 1.
+DELETE FROM 
+  articles
+WHERE 
+  id = 1;
+
+-- ej 2 : 작성일이 오래된 순으로 레코드 2개 삭제
+DELETE FROM articles
+WHERE id IN (
+  SELECT id FROM articles
+  ORDER BY createdAt
+  LIMIT 2
+);
+```
+- SQLite에는 날짜 / 시간을 저장하기 위한 별도 데이터 타입이 없다. 
+- 대신 날짜 미 시간에 대한 함수를 사용해 표기 형식에 따라 TEXT, REAL, INTEGER 값으로 저장
+
+### Multi table queries
+
+Join : 
+관계 : 여러 테이블 간의 (논리적) 연결
+필요한 순간
+- 테이블을 분리하면 데이터 관리는 용이해질 수 있으나, 출력시에는 문제가 있음
+- 테이블 한 개 만을 출력할 수 밖에 없어 다른 테이블과 결합하여 출력하는 것이 필요해짐
+== Join
+
+#### Joining tables
+JOIN clause : 둘 이상의 테이블에서 데이터를 검색하는 방법
+
+1. INNER JOIN : 두 테이블에서 값이 일치하는 레코드에 대해서만 결과를 반환
+  ```SQL
+  SELECT select_list
+  FROM table_a
+  INNER JOIN table_b
+    ON table_b.fk = table_a.pk
+    -- from 절 이후 메인 테이블 지정
+    -- inner join 절 이후 메인 테이블과 조인할 테이블 지정 (table_b)
+    -- ON 키워드 이후 조인 조건을 작성
+    -- 조인 조건은 table_a와 table_b간의 레코드를 일치시키는 규칙을 지정.
+    --p.256
+  ```
+4. LEFT JOIN : 
