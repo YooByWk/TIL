@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 여기서 뭔가 합니다. -->
+  <div></div> 
+  
+  <script>
+    // 부모 요소 선택
+    const divTag = document.querySelector('div')
+
+    // 1. 요소 생성
+    const h1Tag = document.createElement('h1') // 반환이 있으니, 할당 가능
+    console.log(h1Tag)  // h1 tag만 있네요. . . 
+    
+    // 2. 값 추가 (속성, 클래스 속성, 콘텐츠 . . .)
+    h1Tag.textContent = '제목입니다.'
+    console.log(h1Tag)
+
+    // 3. 완성한 요소를 문서에 추가
+    divTag.appendChild(h1Tag) // 자식으로 입양 . . .
+
+    // 4. 요소 삭제
+    divTag.removeChild(h1Tag) // 바로 파양 . . .
+    
+  </script>
+</body>
+
+</html>

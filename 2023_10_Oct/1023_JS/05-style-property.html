@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>Lorem, ipsum dolor.</p>
+  <script>
+    // style tag 없이 뭔가 해보기.
+  
+    // 선택
+    const pTag = document.querySelector('p')
+    console.log(pTag)
+    console.log(pTag.textContent)
+    
+    // pTag의 스타일을 확인해보자
+    console.log(pTag.style) // (키, 밸류 )객체(딕셔너리)로 나오네요
+    pTag.style.color = 'crimson' // 오 바뀜
+    // pTag.style.color = 'blue'
+    pTag.style.fontSize = '5rem'
+    pTag.style.border = '13px solid blue' // css의 인라인 형태로 들어간다.
+    // 주로 class 를 만들고 속성을 집어넣는 . . . 무언가 하는 그런
+    // 이렇게 인라인 쓰는 것은 우선순위가 필요한 경우
+
+  </script>
+</body>
+
+</html>
