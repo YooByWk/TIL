@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" class="input-text">
+  <button id="btn">+</button>
+  <ul></ul>
+
+  <script>
+    // 1. 필요한 요소 선택
+    const inputTag = document.querySelector('.input-text')
+    const btn =document.querySelector('#btn')
+    const ulTag = document.querySelector('ul')
+
+
+    const addTodo = function (event) {
+      // 2.1 사용자 입력 데이터 저장
+      const inputData = inputTag.value
+      // 3. 사용자 입력 데이터가 빈 데이터인지 확인
+      // trim :  공백 제거 // strip 이랑 같은(py) // 스페이스만 눌러도 막혀버림 wwwwww
+      if (inputData.trim()) {
+        // 2.2 데이터를 저장할 li 요소를 생성
+        const LiTag = document.createElement('li')
+        // console.log(LiTag) // 디벅
+        // 2.3 li 요소 컨텐츠에 데이터 입력
+        LiTag.textContent = inputData
+        console.log(LiTag)
+  
+        // 2.4 li 요소를 부모 ul 요소의 자식 요소로 추가
+        ulTag.appendChild(LiTag)
+        // 2.5 todo 추가 후 input의 입력 데이터는 초기화
+        inputTag.value=''
+
+      } else {
+        alert('입력하시오.')
+        // window.alert('입력하시오.') // 윈도우 명령어임
+      }
+    }
+
+    // 2. 버튼에 이벤트 핸들러를 부착
+    btn.addEventListener('click', addTodo)
+
+  </script>
+</body>
+
+</html>

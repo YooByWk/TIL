@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="btn">버튼</button>
+  <button id="btn2">버튼2</button>
+
+  <script>
+    // 1. 버튼 선택
+    const btn = document.querySelector('#btn')
+    const btn2 = document.querySelector('#btn2')
+    // 2. 버튼에 이벤트 핸들러 부착
+    btn.addEventListener('click', function (event) {
+      console.log(event)
+      console.log(event.target)
+      console.log(event.currentTarget)
+        // event 이친구는 this가 강제로 addeventlistener 앞을 지정함. 
+      console.log(this)
+      // 콜백함수를 화살표 함수로 바꾸면 안된다.
+      // 화살표 함수는 자신의 뭔가가 없어서 최상단 this를 찾아간다.
+      // ㅋ ㅋ ㅋ ㅋ 이벤트 타겟으로 접근해서 함수 작성하면, 화살표 가능
+      // 일반함수 가 편?할 듯?
+
+
+    })
+    // 콜백함수를 외부에 작성해도 된다
+    const clickfunc = function (evnet) {
+      console.log(event)
+      console.log(event.target)
+      console.log(event.currentTarget)
+      console.log(this)
+    }
+    btn2.addEventListener2('click', clickfunc)
+    // 
+    
+
+  </script>
+</body>
+
+</html>
