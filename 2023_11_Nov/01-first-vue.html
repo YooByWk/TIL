@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app"> <button @click="count++">{{ count }} </button>
+      <h1>{{ greeting }} </h1>
+      <p>{{ count }} </p>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      const { createApp, ref } = Vue // == import { createApp, ref } from 'vue'
+      // JS 객체할 때 구조 분해 할당
+      // 단축 메서드 . . . asdf = function(){} 을 asdf() = {}
+      const app = createApp({
+        setup() {
+          const count = ref(0)
+          const greeting = ref('hello')
+          return {
+            count ,
+            greeting
+          }
+        }
+      })
+      app.mount('#app')
+    </script>
+  </body>
+</html>

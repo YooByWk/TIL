@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>냥냥펀치</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const URL = 'https://api.thecatapi.com/v1/images/search/'
+    const btn = document.querySelector('button')
+
+    // const getCats = function () {
+    //   const response = axios({
+    //   method : 'get',
+    //   url : URL
+    // })
+    //   .then((response) => {
+    //     // console.log(response)
+    //     // console.log(response.data)
+    //     // console.log(response.data[0].url) // 이미지 주소
+    //     // 응답 받은 결과에서 url을 찾고
+    //     // img 태그를 만들고 
+    //     // img 속성을 채우고
+    //     // body에 img 속성을 추가한다.
+        
+    //     // ▼ 한 번에 모두 다 하고있는 코드 ▼
+    //     const imgurl = response.data[0].url
+    //     const imgTag = document.createElement('img')
+    //     imgTag.setAttribute('src', imgurl)
+    //     document.body.appendChild(imgTag)
+    //   })
+    //   .catch((error) => {
+    //     console.log(error)
+    //   })
+    // }
+    
+    const getCats = function () {
+      const response = axios({
+      method : 'get',
+      url : URL
+    })
+      .then((response) => {
+        // 응답 받은 결과에서 url을 찾고
+        const imgurl = response.data[0].url
+        return imgurl
+        // img 속성을 채우고
+        // body에 img 속성을 추가한다.
+      })
+      .then((response) => { // 인자 맘대로 이름 정해도 됨... 
+        // img 태그를 만들고 
+        // img 속성을 채우고
+        // body에 img 속성을 추가한다.
+        const imgTag = document.createElement('img')
+        imgTag.setAttribute('src', response)
+        document.body.appendChild(imgTag)
+        // 앞의 callback 함수의 반환값을 필요로 한다. === return을 필요로 한다.
+      })
+
+      .catch((error) => {
+        console.log(error)
+      })
+    }
+    btn.addEventListener('click', getCats)
+
+      // 1. 버튼을 누르면
+      // 2. 고양이 이미지를 요청한다
+      // 3. 요청이 처리되어 응답이 오면
+      // 4. 응답 데이터의 있는 이미지 주소 값을 img 태그에 넣어 이미지를 출력한다.
+  </script>
+</body>
+
+</html>

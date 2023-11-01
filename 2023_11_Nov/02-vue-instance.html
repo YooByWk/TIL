@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <div id="app">
+
+  </div>
+  <body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      const { createApp, ref } = Vue
+
+      const app = createApp({
+        setup() {
+          const message = ref('hello vue!')
+          console.log(message.value)
+          return{
+
+          }
+        }
+      })
+      app.mount('#app')
+    </script>
+  </body>
+</html>
+
+
+<!-- 
+1. createApp (함수임)앱 만들기, 인스턴스 작성
+2. .mount 가져다 넣기
+3. ref() 반응형 상태(데이터)를 선언하는 함수 (Declaring Reactive State) import 하쇼
+4. setup 넣기.- - 리턴으로 객체를 가짐
+5. ref로 뭔가 쓰면 -> return 해줘야 함 
+ref : 반응형 상태를 선언하는 함수 > 반응형을 가지는 참조 변수를 만드는 것
+기본 구조
+
+-->

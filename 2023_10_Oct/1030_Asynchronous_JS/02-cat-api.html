@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const URL  = 'https://api.thecatapi.com/v1/images/search'
+    // const URL  = 'https://ap1i.thecatapi.com/v1/images/search'
+    // catch 확인하려면 error 필요합니다.
+    // 요청
+    const response = axios({
+      method : 'get',
+      url : URL
+
+    })
+    // promise 가 뭐죠? - 객체네요? - 일정한 key - value 인데요 - 
+    // console.log(response)
+    // response.then(이전 요청이 성공했을 때 실행하는 콜백함수)
+      .then((response) => {
+        console.log(response)
+        console.log(response.data)
+        console.log(response.data[0].url)
+      })
+      // catch 앞에서 문제가 발생한다면, catch에서 쓱 잡아요.
+      .catch((error) => {
+        console.log(error)
+      })
+    // 요청 - 응답 은 즉시 처리가 되지 않는다.
+      console.log('애옹') // 애옹이 먼저 출력됐다.
+      // callstack - > axios > 바로 처리 안됨 > Web API 로 넘겨버림
+      // console.log('애옹') > 바로 call stack에서 처리 > output 
+      // task queue에서 잠자던 응답 받은 axios가 call stack 으로 돌아옴.
+      // call stack -> output
+      // 이래서 애옹이 먼저 출력된 것 // 병렬적 구조. // 비동기적 코드
+  </script>
+
+</body>
+
+</html>

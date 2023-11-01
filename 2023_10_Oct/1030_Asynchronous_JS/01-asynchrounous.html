@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const slowRequest = function (callBack) {
+      console.log('1. 오래걸리는 작업 시작. . . ')
+      setTimeout(function () {
+        callBack()
+       } , 3000)
+      } // (콜백함수()) 그 시간 이후 함수 출력 // ms 1000 = 1 sec
+
+    const myCallBack = function () {
+      console.log('2. 콜백함수 실행됨')
+    }
+
+    slowRequest(myCallBack)
+
+    console.log('3. 다른 작업 실행')
+  </script>
+</body>
+
+</html>
