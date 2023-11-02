@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Binding to Objects -->
+    <div :style="{color : activeColor, fontSize : fontSize + 'px'}">Text</div>
+    <div :style="{ 'font-size' : fontSize +'px'}">Text</div>
+    <div :style="styleObj">Text</div> 
+    <!-- 1번 3번 동일 -->
+
+    <!-- Binding to Arrays -->
+    <div :style="[styleObj, styleObj2]">Text</div>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref } = Vue
+
+    const app = createApp({
+      setup() {
+        const activeColor = ref('crimson')
+        const fontSize = ref(50)
+        const styleObj = ref({
+          color : activeColor,
+          // fontSize : fontSize 라고 쓰면 안댐
+          // 위에것은 fontSize 라는 Ojbect에 + px 하고 있는 것!!!!
+
+          fontSize : fontSize.value + 'px' 
+          //  따라서 반응 객체가 반응 안으로 들어가면 오토 언랩
+          // 반응형으로 속성 들어가면 오토 언랩이 되려면 ''최종 평가 결과물''이어야 함
+        })
+        const styleObj2 = ref({
+          color : 'blue',
+          border: '4px solid black'
+        })
+        return {
+          activeColor,
+          fontSize,
+          styleObj,
+          styleObj2,
+        }
+      }
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+
+</html>

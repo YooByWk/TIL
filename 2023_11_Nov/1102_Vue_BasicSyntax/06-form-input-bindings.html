@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" @input="onInput" :value="inputText1">
+    <p> {{ inputText1  }}</p>
+
+    <input type="text" v-model="inputText2">
+    <p>{{ inputText2 }}</p>
+
+  </div>
+
+  <script>
+    const { createApp, ref } = Vue
+
+    const app = createApp({
+      setup() {
+        //
+        const inputText1 = ref('') // 양방향
+        const onInput = function (event) {
+          inputText1.value = event.currentTarget.value
+        }
+        const inputText2 =ref('')
+        return {
+          inputText1,
+          onInput,
+          inputText2,
+        }
+      }
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+
+</html>

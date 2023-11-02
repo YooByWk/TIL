@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .active {
+        color: crimson;
+      }
+
+      .text-primary {
+        color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- Binding to Objects -->
+      <div :class="{ active : isActive }">Text</div>
+      <div
+        class="static"
+        :class="{ active: isActive, 'text-primary' : hasInfo}"
+      >
+        Text
+      </div>
+      <div class="static" :class="classObj">Text</div>
+
+      <!-- Binding to Arrays -->
+      <div :class="[activeClass,infoclass]">Text</div>
+      <div :class="[{ active : isActive }, infoclass]">Text</div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      const { createApp, ref } = Vue;
+
+      const app = createApp({
+        setup() {
+          // const isActive = ref(false) // 색상 표시가 안됨 - false라서
+          const isActive = ref(true); // 색상 표시가 됩니다. - true 통과라서+
+          const hasInfo = ref(true); // 안길어지게 하자
+          const classObj = ref({
+            active: isActive,
+            "text-primary": hasInfo,
+          });
+          const activeClass = ref("active");
+          const infoclass = ref("text-primary");
+
+          return {
+            isActive,
+            hasInfo,
+            classObj,
+            activeClass,
+            infoclass,
+          };
+        },
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>
