@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <div>  {{completed}} </div>
+    <form>
+      <input  v-model="newTodo"> 
+      <button @click.prevent="addTodo">Add Todo</button>
+    </form>
+
+    <ul>
+      <li v-for="todo in todos" key ="todo.id">
+        {{ todo.text }}
+        <button @click="removeTodo(todo)">X</button>
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref, computed} = Vue
+
+    const app = createApp({
+      setup() {
+        let id = 0
+
+        const newTodo = ref(null)
+        const todos = ref([
+          { id: id++, text: 'Learn HTML', isCompleted : false },
+          { id: id++, text: 'Learn JS' ,isCompleted : true},
+          { id: id++, text: 'Learn Vue',isCompleted : false }
+        ])
+        const addTodo = function () {
+          todos.value.push({id: id++, text:newTodo.value, isCompleted : false})
+          console.log('asd')
+          newTodo.value = ''
+        }
+        const removeTodo = function (todo) {
+          todos.value =  todos.value.filter((t) => {
+            return todo !== t // False
+            // 눌린것과 같지 않은 것들만 todos.value로 받아서 반환하기에, 하나가 사라진다. ( 삭제 된다)
+          })
+        }
+        const completed = computed(() => {
+          return todos.value.filter((todo) => {
+            return todo.isCompleted
+          })
+        })
+        return {
+          newTodo,
+          todos,
+          addTodo,
+          removeTodo,
+          completed
+        }
+      }
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+
+</html>
