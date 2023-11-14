@@ -1,0 +1,183 @@
+
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "mIV7Qi8nsaDrnYl--tUSInREh9w",
+  "nextPageToken": "CAUQAA",
+  "regionCode": "KR",
+  "pageInfo": {
+    "totalResults": 4596,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5n0UHESsUEUPwgz84RdATXqGlT8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OM6py-xHDr8"
+      },
+      "snippet": {
+        "publishedAt": "2023-11-01T01:01:29Z",
+        "channelId": "UC_XI3ByFO1uZIIH-g-zJZiw",
+        "title": "[다시보기] SSAFY 11기 온라인 모집설명회, 궁금하면 드루와",
+        "description": "지원서 제출 마감임박 11월 6일(월) 17시까지!! 과연 11기 온라인 설명회에서는 무슨 일이 있었는지 궁금한 사람! 다 드루와 좋댓구 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OM6py-xHDr8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OM6py-xHDr8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OM6py-xHDr8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "삼성청년SW아카데미 Youtube채널 HELLOSSAFY",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-11-01T01:01:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Kf66wMvMB0TXNfA6A_YvsMQICd4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-EqkddveY2Q"
+      },
+      "snippet": {
+        "publishedAt": "2023-11-01T07:01:54Z",
+        "channelId": "UC_XI3ByFO1uZIIH-g-zJZiw",
+        "title": "[다시보기] SSAFY 11기 온라인 모집설명회 : 싸피드 FAQ(적성진단/교육)",
+        "description": "예비 지원자들이 가장 많이 하는 질문만 모아서 빠르게 답변해주는 싸피~드한 FAQ! SSAFY 교육/기획 담당 싸버지가 두 팔 걷고 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-EqkddveY2Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-EqkddveY2Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-EqkddveY2Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "삼성청년SW아카데미 Youtube채널 HELLOSSAFY",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-11-01T07:01:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9QJIXqKryDrj2gV-GCnOFLCCfqc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "U7449cbkq-c"
+      },
+      "snippet": {
+        "publishedAt": "2023-10-23T01:00:12Z",
+        "channelId": "UC_XI3ByFO1uZIIH-g-zJZiw",
+        "title": "삼성청년SW아카데미 11기 모집 | &quot;이상한 나라의 SSAFY&quot; #2편 #전문가편",
+        "description": "삼성 청년 SW 아카데미 11기 모집, 꿈을 현실로 만들어갈 여러분의 많은 관심과 지원을 부탁드립니다. 11기 모집정보 보러가기 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/U7449cbkq-c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/U7449cbkq-c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/U7449cbkq-c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "삼성청년SW아카데미 Youtube채널 HELLOSSAFY",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-10-23T01:00:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WsfebQ6t-d8oyf9Rl4KA9KTrZGA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "c5-l6tY8MFU"
+      },
+      "snippet": {
+        "publishedAt": "2023-11-01T07:01:57Z",
+        "channelId": "UC_XI3ByFO1uZIIH-g-zJZiw",
+        "title": "[다시보기] SSAFY 11기 온라인 모집설명회 : 실시간 Q&amp;A",
+        "description": "싸피 싸람들과 수료생들이 직접 답변해주는 실시간 Q&A! 비전공자 SW적성진단 준비 꿀팁이 궁금한 사람! 전공자의 취업 후기가 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/c5-l6tY8MFU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/c5-l6tY8MFU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/c5-l6tY8MFU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "삼성청년SW아카데미 Youtube채널 HELLOSSAFY",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-11-01T07:01:57Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "g1-hYDlUj0wbv0pxps1FdfCyPGI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IAhq17Z2l6Q"
+      },
+      "snippet": {
+        "publishedAt": "2023-10-10T01:00:07Z",
+        "channelId": "UC_XI3ByFO1uZIIH-g-zJZiw",
+        "title": "삼성청년SW아카데미 11기 모집 | &quot;이상한 나라의 SSAFY&quot; #1편 #혜택편",
+        "description": "삼성 청년 SW 아카데미 11기 모집, 꿈을 현실로 만들어갈 여러분의 많은 관심과 지원을 기다립니다 11기 모집정보 보러가기 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IAhq17Z2l6Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IAhq17Z2l6Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IAhq17Z2l6Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "삼성청년SW아카데미 Youtube채널 HELLOSSAFY",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-10-10T01:00:07Z"
+      }
+    }
+  ]
+}

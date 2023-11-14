@@ -43,8 +43,8 @@
           newTodo.value = ''
         }
         const removeTodo = function (todo) {
-          todos.value =  todos.value.filter((t) => {
-            return todo !== t // False
+          todos.value =  todos.value.filter((target) => {
+            return todo !== target // False
             // 눌린것과 같지 않은 것들만 todos.value로 받아서 반환하기에, 하나가 사라진다. ( 삭제 된다)
           })
         }
