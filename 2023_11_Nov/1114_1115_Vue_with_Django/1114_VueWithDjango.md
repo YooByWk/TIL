@@ -68,3 +68,80 @@ Vue -> Django : 브라우저 측에서 거절됨
 - Django에서는 django-cors-headers 라이브러리를 활용
 - > 손쉽게 응답 객체에 CORS header를 추가해주는 라이브러리
 
+
+
+# 2023_11_15 
+
+# DRF Authentication 어제에 이어서.
+
+- Permissions 권한 
+   - 요청에 대한 접근 허용 또는 거부 여부를 결정 
+
+# 인증과 권한 
+- 인증이 먼저 진행되며 수신 요청을 해당 요청의 사용자 또는 해당 요청이 서명된 토큰(token)과 같은 일련의 자격 증명과 연결
+- 그런 다음 권한 및 제헌 정책(throttling policies)은 인증이 완료된 해당 자격 증명을 사용하여 요청을 해용해야 하는 지를 결정
+
+## DRF 에서의 인증
+- 인증은 항상 view 함수 시작 시, 권한 및 제한 확인이 발생하기 전, 다른 코드의 진행이 허용되기 전에 실행됨
+- > 인증 자체로는 들어오는 요청을 허용하거나 거부할 수 없으며, 단순히 요청에 사용된 자격 증명만 식별한다.
+
+## 승인되지 않은 응답 및 금지된 응답
+- 인증되지 않은 요청이 권한을 거부하는 경우 해당되는 두 가지 오류 코드가 응답
+  - 1. HTTP 401 Unauthorized
+    - 요청된 리소스에 대한 유효한 인증 자격 증명이 없기 때문에 클라이언트 요청이 완료되지 않았음을 나타냄
+  - 2. HTTP 403 Forbidden (Permission Denied)
+    - 서버에 요청이 전달되었지만, 권한 때문에 거절되었다는 것을 의미
+    - 401과 다른점은 서버는 클라이언트가 누구인지 알고 있음
+
+## 인증체계설정방법
+1. 전역 설정
+2. View 함수 별 설정
+
+## DRF가 제공하는 인증 체계
+1. BasicAuthentication
+2. TokenAuthentication
+etc.
+2번을 쓸 예정
+
+## TokenAuthentication 
+- 간단한 token 기반 HTTP 인증 체계
+- 기본 데스크톱 및 모바일 클라이언트와 같은 클라이언트-서버 설정에 적합
+- > 서버가 사용자에게 토큰을 발급하여 사용자는 매 요청마다 발급받은 토큰을 요청과 함께 보내 인증 과정을 거침 
+
+
+# Dj-Rest-Auth 
+> pip install dj-rest-auth
+>
+> 온갖 인증 라이브러리
+
+## Dj-Rest-Auth 의 Registration 기능 추가 설정
+1. 패키지 추가 설치
+2. `pip install 'dj-rest-auth[with_socilal]'`
+3. + settings.py
+
+
+# ??? 
+클라이언트가 Token으로 인증받는 방법 
+1. 'Authorizaiton' HTTP Header 포함
+2. 키 앞에는 Token 적고, 공백으로 key와 구분
+   
+
+> 정리 : 발급 받은 Token을 인증이 필요한 요청마다 함께 보내야 함
+>
+> 아직까지는 모두가 전부 같은 일을 할 수 있음. 
+
+## 권한 정책 설정
+
+- IsAuthenticated 권한설정
+  - ㅇ.ㅇ
+
+# vue
+
+index.js
+
+## 인증 여부 추가 기능 구현 
+
+- beforeEach 이동 전 마다 뭔가 뭔가 하는 뭔가 뭔가
+
+- computed로 로그인 여부 파악
+  - token의 값이 변할 때만 계산하도록.

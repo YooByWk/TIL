@@ -29,6 +29,9 @@ const createArticle = function () {
     data: {
       title: title.value,
       content: content.value // key 는 django model table을 따라야 함
+    },
+    headers: {
+      Authorization: `Token ${store.token}`
     }
   })
   .then((res) => {
